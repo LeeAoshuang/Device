@@ -257,8 +257,12 @@ open class Device {
         return type(detectSimulator: detectSimulator) == .iPad
     }
 
+    static public func isPhone(detectSimulator: Bool = true) -> Bool {
+        return type(detectSimulator: detectSimulator) == .iPhone
+    }
+
     static public func isPod(detectSimulator: Bool = true) -> Bool {
-        return type() == .iPod
+        return type(detectSimulator: detectSimulator) == .iPod
     }
 
     static public func isSimulator() -> Bool {
